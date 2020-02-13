@@ -1,0 +1,32 @@
+﻿@model Uppgift2.Models.Genra
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="rightcolumn">
+    <form asp-action="Edit">
+        <div asp-validation-summary="All"></div>
+        <input type="hidden" asp-for="Id" />
+        <h2>UPDATE CD</h2>
+
+        <div class="input-container">
+            <i class="fa fa-user icon"></i>
+            <input asp-for="Author" class="input-field" placeholder="AUTHOR NAME" />
+        </div>
+
+        <div class="input-container">
+            <i class="fa fa-user icon"></i>
+            <input asp-for="Name" class="input-field" placeholder="CD NAME" />
+        </div>
+
+        <div class="input-container">
+            <textarea asp-for="Description" class="input-field" placeholder="DESCRIPTION"></textarea>
+        </div>
+
+        <input type="submit" value="UPDATE" class="btn" />
+        <br /><br /><br />
+        <a asp-action="Index" class="btn">Back to List</a>
+    </form>
+</div>

@@ -1,0 +1,29 @@
+﻿@model Uppgift2.Models.Genra
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+
+
+<div class="detailsrightcolumn">
+    <div class="card">
+
+        <p>
+         CD NAME: @Model.Name
+        </p>
+
+        <p>
+         AUTHOR NAME:   @Model.Author
+        </p>
+
+        <p>
+          DESCRIPTION  @Html.Raw(Model.Description)
+        </p>
+
+        <a asp-action="Edit" asp-route-id="@Model.Id" class="bttn">Edit</a>    <a asp-action="Delete" asp-route-id="@Model.Id" class="bttn">Delete</a> <a asp-action="Index" class="bttn">Back to List</a>
+    </div>
+</div>

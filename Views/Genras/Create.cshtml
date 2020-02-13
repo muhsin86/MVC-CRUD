@@ -1,0 +1,31 @@
+﻿@model Uppgift2.Models.Genra
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="rightcolumn">
+    <form asp-action="Create">
+        <div asp-validation-summary="All"></div>
+        <h2>ADD DIN FAVORITE CD</h2>
+        <div class="input-container">
+            <i class="fa fa-user icon"></i>
+            <input asp-for="Author" class="input-field" placeholder="AUTHOR NAME" />
+        </div>
+
+        <div class="input-container">
+            <i class="fa fa-user icon"></i>
+            <input asp-for="Name" class="input-field" placeholder="CD NAME" />
+        </div>
+
+        <div class="input-container">
+            <textarea asp-for="Description" class="input-field" placeholder="DESCRIPTION"></textarea>
+        </div>
+
+        <input type="submit" value="ADD" class="btn" />
+        <br /><br /><br />
+        <a asp-action="Index" class="btn">Back to List</a>
+    </form>
+</div>
+
+<script src="~/js/Site.js"></script>
